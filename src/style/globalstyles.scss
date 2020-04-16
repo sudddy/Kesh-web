@@ -1,0 +1,316 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("../fonts/Roboto-Italic.ttf") format("truetype");
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+$break-min: 300px;
+$break-large: 1040px;
+$break-lg: 1200px;
+$break-md: 992px;
+$break-small: 450px;
+$break-sm: 768px;
+$card-box-shadow: 0 0 20px 0 rgba(17, 17, 17, 0.14);
+$primary-color: #5459ed;
+$secondary-color: #3824a3;
+$background-lightgrey: rgba(243, 244, 246, 0.8);
+$background-primary: rgba(84, 89, 237, 0.95);
+
+$black-300: #585f69;
+$black-500: #1f1f1f;
+$indigo-500: #5457ed;
+$grey-color: #3c444f;
+$white-500: #ffffff;
+$black-200: #afb4c4;
+$black-100: #e2e1ed;
+//#region Common use style ---------------------------------
+body {
+  min-width: $break-min;
+  font-family: "Roboto Regular" !important;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.product-adv {
+  padding-top: 15px;
+  min-height: 200px !important;
+
+  @media all and (max-width: $break-sm) {
+    align-items: center;
+  }
+}
+
+.standard-button {
+  display: inline-block;
+  text-align: center;
+  font-family: "Roboto Medium";
+  font-size: 15px;
+  width: auto;
+  border: 2px solid white;
+  border-radius: 2px;
+  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+
+  // &:hover {
+  //   color: white;
+  //   background-color: $primary-color;
+  // }
+
+  &.plain-button {
+    color: white;
+    border-color: white;
+  }
+  &.transparent-button {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover {
+      color: white;
+      background: rgba($color: #ffffff, $alpha: 0.3);
+    }
+  }
+  &.indigo-button {
+    background-color: #5457ed;
+    color: white;
+    border-color: #5457ed;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: #4548b5;
+      border-color: #4548b5;
+    }
+  }
+  &.teal-button {
+    background: #38b8cb;
+    color: white;
+    border-color: #38b8cb;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: #33a8b9;
+      border-color: #33a8b9;
+    }
+  }
+}
+
+.bg-light-gray {
+  background-color: $background-lightgrey;
+}
+
+.section {
+  text-align: center;
+  padding-top: 50px;
+
+  .title-area {
+    margin: auto;
+    max-width: 1050px;
+    padding: 50px 0;
+  }
+}
+.white-color {
+  color: white;
+}
+.grey {
+  color: $grey-color;
+}
+.black-300 {
+  color: $black-300;
+}
+.black-500 {
+  color: $black-500;
+}
+.indigo-500 {
+  color: $indigo-500;
+}
+.black-200 {
+  color: $black-200;
+}
+.black-100 {
+  color: $black-100;
+}
+
+.common-padding {
+  padding-top: 15px;
+}
+
+h1 {
+  &.title {
+    font-family: "Roboto Medium";
+    font-size: 38px;
+    line-height: 1.138;
+    margin: 0 auto;
+
+    // @media all and (min-width: $break-small) {
+    //   font-size: 42px;
+    // }
+
+    @media all and (min-width: $break-sm) {
+      font-size: 48px;
+    }
+  }
+}
+
+h2 {
+  &.title {
+    font-family: "Roboto Medium";
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 auto;
+
+    @media all and (min-width: $break-sm) {
+      font-size: 34px;
+    }
+  }
+}
+
+h3 {
+  &.title {
+    font-family: "Roboto Medium";
+    font-size: 25px;
+    line-height: 1.267;
+    margin: 0 auto;
+
+    @media all and (min-width: $break-small) {
+      font-size: 28px;
+    }
+
+    @media all and (min-width: $break-sm) {
+      font-size: 30px;
+    }
+  }
+}
+
+h4 {
+  &.title {
+    font-family: "Roboto Regular";
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 auto;
+
+    // @media all and (min-width: $break-small) {
+    //   font-size: 20px;
+    // }
+
+    // @media all and (min-width: $break-sm) {
+    //   font-size: 22px;
+    // }
+  }
+  &.heading {
+    font-family: "Roboto Medium";
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 auto;
+  }
+}
+
+p {
+  &.body-big {
+    font-family: "Roboto Medium";
+    font-size: 15px;
+    line-height: 22px;
+
+    // @media all and (min-width: $break-small) {
+    //   font-size: 15px;
+    // }
+
+    // @media all and (min-width: $break-sm) {
+    //   font-size: 13px;
+    // }
+  }
+}
+
+p {
+  &.body-normal {
+    font-family: "Roboto Regular";
+    font-size: 15px;
+    line-height: 22px;
+  }
+  &.body-normal-bold {
+    font-family: "Roboto Medium";
+    font-size: 15px;
+    line-height: 22px;
+  }
+  &.body-small {
+    // change to bold in the future
+    font-family: "Roboto Medium";
+    font-size: 12px;
+    line-height: 22px;
+  }
+  &.body-small-regular {
+    font-family: "Roboto Regular";
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+p {
+  &.body-quote {
+    font-family: "Roboto Italic";
+    font-size: 15px;
+    line-height: 22px;
+
+    @media all and (min-width: $break-small) {
+      font-size: 15px;
+    }
+
+    @media all and (min-width: $break-sm) {
+      font-size: 13px;
+    }
+
+    &.hight-light {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.btn-group {
+  padding: 20px 0px;
+  padding-right: 30px;
+}
+
+.product-desc-logo {
+  margin-left: -16px;
+  @media all and (max-width: $break-lg) {
+    // text-align: -webkit-center;
+    text-align: left;
+  }
+}
+
+//start of footer section
+.page-footer {
+  height: 300px;
+  background-image: linear-gradient(to top, #e34141, #f49b48);
+}
+
+.image-padding {
+  padding: 50px 0px;
+}
