@@ -177,7 +177,7 @@ h1 {
   &.title {
     font-family: "Ubuntu Medium";
     font-size: 38px;
-    line-height: 1.138;
+    line-height: 32px;
     margin: 0 auto;
 
     // @media all and (min-width: $break-small) {
@@ -205,9 +205,9 @@ h2 {
 
 h3 {
   &.title {
-    font-family: "Roboto Medium";
-    font-size: 25px;
-    line-height: 1.267;
+    font-family: "Ubuntu Medium";
+    font-size: 24px;
+    line-height: 32px;
     margin: 0 auto;
 
     @media all and (min-width: $break-small) {
@@ -222,23 +222,15 @@ h3 {
 
 h4 {
   &.title {
-    font-family: "Roboto Regular";
+    font-family: "Ubuntu light";
     font-size: 18px;
-    line-height: 25px;
+    line-height: 32px;
     margin: 0 auto;
-
-    // @media all and (min-width: $break-small) {
-    //   font-size: 20px;
-    // }
-
-    // @media all and (min-width: $break-sm) {
-    //   font-size: 22px;
-    // }
   }
   &.heading {
-    font-family: "Roboto Medium";
+    font-family: "Ubuntu Medium";
     font-size: 18px;
-    line-height: 25px;
+    line-height: 32px;
     margin: 0 auto;
   }
 }
@@ -248,14 +240,6 @@ p {
     font-family: "Roboto Medium";
     font-size: 15px;
     line-height: 22px;
-
-    // @media all and (min-width: $break-small) {
-    //   font-size: 15px;
-    // }
-
-    // @media all and (min-width: $break-sm) {
-    //   font-size: 13px;
-    // }
   }
 }
 
@@ -345,11 +329,20 @@ p {
 .text-padding {
   padding-top: 30px;
 }
+.text-double-padding {
+  padding-top: 55px;
+}
 .button-padding {
   margin-top: 50px;
 }
-
+.content-padding {
+  padding: 50px 0;
+}
 // .line {
 //   border-left: thick solid #ff0000;
 //   // background-image: linear-gradient(to top, #cc8d30, #f4ba48);
 // }
+
+.grey {
+  color: rgba(15, 16, 19, 0.7);
+}
