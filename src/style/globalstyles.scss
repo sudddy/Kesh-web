@@ -1,14 +1,18 @@
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Ubuntu Regular";
+  src: url("../fonts/Ubuntu-R.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Roboto Medium";
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-family: "Ubuntu Medium";
+  src: url("../fonts/Ubuntu-M.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto Italic";
   src: url("../fonts/Roboto-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url("../fonts/Ubuntu-Light.ttf") format("truetype");
 }
 
 @keyframes fade-in {
@@ -61,21 +65,16 @@ body {
 .standard-button {
   display: inline-block;
   text-align: center;
-  font-family: "Roboto Medium";
-  font-size: 15px;
+  font-family: "Ubuntu Light";
+  font-size: 18px;
   width: auto;
   border: 2px solid white;
-  border-radius: 2px;
+  border-radius: 5px;
   padding-bottom: 9px;
   padding-top: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
   cursor: pointer;
-
-  // &:hover {
-  //   color: white;
-  //   background-color: $primary-color;
-  // }
 
   &.plain-button {
     color: white;
@@ -94,30 +93,42 @@ body {
       background: rgba($color: #ffffff, $alpha: 0.3);
     }
   }
-  &.indigo-button {
-    background-color: #5457ed;
-    color: white;
-    border-color: #5457ed;
+  &.yellow-button {
+    color: #cc8d30;
+    border-color: #cc8d30;
     a {
       color: white;
       text-decoration: none;
     }
     &:hover {
-      background-color: #4548b5;
-      border-color: #4548b5;
+      background-color: #cc8d30;
+      border-color: #cc8d30;
+      color: #fff;
     }
   }
-  &.teal-button {
-    background: #38b8cb;
+  &.mixed-button {
+    background-image: linear-gradient(to top, #e34141, #f49b48);
     color: white;
-    border-color: #38b8cb;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    // &:hover {
+    //   background-color: #cc8d30;
+    //   color: #fff;
+    // }
+  }
+  &.blue-button {
+    color: #1393ff;
+    border-color: #1393ff;
     a {
       color: white;
       text-decoration: none;
     }
     &:hover {
-      background-color: #33a8b9;
-      border-color: #33a8b9;
+      background-color: #1393ff;
+      color: #fff;
     }
   }
 }
@@ -164,7 +175,7 @@ body {
 
 h1 {
   &.title {
-    font-family: "Roboto Medium";
+    font-family: "Ubuntu Medium";
     font-size: 38px;
     line-height: 1.138;
     margin: 0 auto;
@@ -181,8 +192,8 @@ h1 {
 
 h2 {
   &.title {
-    font-family: "Roboto Medium";
-    font-size: 34px;
+    font-family: "Ubuntu Medium";
+    font-size: 32px;
     line-height: 1.2;
     margin: 0 auto;
 
@@ -249,21 +260,22 @@ p {
 }
 
 p {
-  &.body-normal {
-    font-family: "Roboto Regular";
-    font-size: 15px;
-    line-height: 22px;
+  &.body-normal-ul {
+    font-family: "Ubuntu Light";
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(15, 16, 19, 0.7);
   }
   &.body-normal-bold {
-    font-family: "Roboto Medium";
+    font-family: "Ubuntu Medium";
     font-size: 15px;
     line-height: 22px;
   }
-  &.body-small {
-    // change to bold in the future
-    font-family: "Roboto Medium";
-    font-size: 12px;
-    line-height: 22px;
+  &.body-small-ul {
+    font-family: "Ubuntu Light";
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(15, 16, 19, 0.7);
   }
   &.body-small-regular {
     font-family: "Roboto Regular";
@@ -309,8 +321,35 @@ p {
 .page-footer {
   height: 300px;
   background-image: linear-gradient(to top, #e34141, #f49b48);
+  display: flex;
+  justify-content: center;
+  .footer-heading {
+    padding: 100px;
+    color: white;
+    .f-second-heading {
+      padding-left: 150px;
+    }
+    .email {
+      padding: 50px 120px;
+      a {
+        color: white;
+      }
+    }
+  }
 }
 
 .image-padding {
   padding: 50px 0px;
 }
+
+.text-padding {
+  padding-top: 30px;
+}
+.button-padding {
+  margin-top: 50px;
+}
+
+// .line {
+//   border-left: thick solid #ff0000;
+//   // background-image: linear-gradient(to top, #cc8d30, #f4ba48);
+// }
