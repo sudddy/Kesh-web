@@ -200,6 +200,10 @@ h2 {
     @media all and (min-width: $break-sm) {
       font-size: 34px;
     }
+
+    @media all and (max-width: $break-sm) {
+      font-size: 21px;
+    }
   }
 }
 
@@ -210,8 +214,8 @@ h3 {
     line-height: 32px;
     margin: 0 auto;
 
-    @media all and (min-width: $break-small) {
-      font-size: 28px;
+    @media all and (max-width: $break-sm) {
+      font-size: 16px;
     }
 
     @media all and (min-width: $break-sm) {
@@ -303,21 +307,35 @@ p {
 
 //start of footer section
 .page-footer {
-  height: 300px;
+  padding: 50px 0px;
   background-image: linear-gradient(to top, #e34141, #f49b48);
   display: flex;
   justify-content: center;
   .footer-heading {
     padding: 100px;
     color: white;
-    .f-second-heading {
+    .heading {
       padding-left: 150px;
+      @media all and (max-width: $break-sm) {
+        padding-left: 60px;
+      }
+    }
+    .f-second-heading {
+      padding-top: 5px;
+      padding-left: 120px;
+      @media all and (max-width: $break-sm) {
+        padding-left: 45px;
+      }
     }
     .email {
-      padding: 50px 120px;
+      padding-top: 60px;
+      text-decoration: underline;
       a {
         color: white;
       }
+    }
+    .icons {
+      padding-top: 30px;
     }
   }
 }
@@ -338,10 +356,6 @@ p {
 .content-padding {
   padding: 50px 0;
 }
-// .line {
-//   border-left: thick solid #ff0000;
-//   // background-image: linear-gradient(to top, #cc8d30, #f4ba48);
-// }
 
 .grey {
   color: rgba(15, 16, 19, 0.7);

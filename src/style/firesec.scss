@@ -1,0 +1,306 @@
+//#region Variable  ----------------------------------------
+$break-min: 300px;
+$break-large: 1040px;
+$break-lg: 1200px;
+$break-md: 992px;
+$break-small: 450px;
+$break-sm: 768px;
+$card-box-shadow: 0 0 20px 0 rgba(17, 17, 17, 0.14);
+$primary-color: #5459ed;
+$secondary-color: #3824a3;
+$black: #1f1f1f;
+$light-grey: #f3f4f6;
+$background-lightgrey: rgba(243, 244, 246, 0.8);
+$background-primary: rgba(84, 89, 237, 0.95);
+
+//#region Page section style -------------------------------
+.page-head {
+  .header-content-container {
+    height: 450px;
+    position: relative;
+    .content {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      .header {
+        display: flex;
+        justify-content: space-between;
+        width: 1140px;
+        @media all and (max-width: $break-min) {
+          max-width: 300px;
+        }
+        @media all and (max-width: $break-sm) {
+          max-width: 690px;
+        }
+        @media all and (min-width: $break-lg) {
+          max-width: 1140px;
+        }
+        .logo {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          float: left;
+        }
+        .navbar-right-web {
+          height: 100%;
+          display: none;
+          @media all and (min-width: $break-md) {
+            display: flex;
+          }
+
+          .navbar-nav {
+            height: 100%;
+            margin-right: 150px;
+          }
+          .navbar-nav > li {
+            padding-top: 3px;
+            padding-right: 10px;
+          }
+          .navbar-nav > li > a {
+            color: #000000;
+          }
+          .navbar-nav > li > a {
+            &:hover {
+              background-color: inherit;
+              color: #fff;
+              opacity: 0.5;
+            }
+            &:focus {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    .main-content {
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+
+      .wrapper {
+        display: flex;
+        width: 1140px;
+        @media all and (max-width: $break-min) {
+          max-width: 300px;
+        }
+        @media all and (max-width: $break-sm) {
+          max-width: 690px;
+        }
+        @media all and (min-width: $break-lg) {
+          max-width: 1140px;
+        }
+        justify-content: center;
+        .left-side {
+          .text-content {
+            padding-top: 50px;
+          }
+        }
+        .right-side {
+          .text-content {
+            width: 500px;
+            @media all and (max-width: $break-sm) {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-image {
+  background-color: #c6e5ff;
+  padding: 100px 0px;
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+    .wrapper {
+      display: flex;
+      width: 1140px;
+      @media all and (max-width: $break-min) {
+        max-width: 300px;
+      }
+      @media all and (max-width: $break-sm) {
+        max-width: 690px;
+      }
+      @media all and (min-width: $break-lg) {
+        max-width: 1140px;
+      }
+      justify-content: center;
+    }
+  }
+}
+
+.challenge {
+  background-color: #eff7fe;
+  padding: 100px 0px;
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+    .wrapper {
+      display: flex;
+      width: 1140px;
+      @media all and (max-width: $break-sm) {
+        max-width: 300px;
+      }
+      @media all and (min-width: $break-sm) {
+        max-width: 690px;
+      }
+      @media all and (min-width: $break-lg) {
+        max-width: 1140px;
+      }
+      justify-content: center;
+      .left-side {
+        @media all and (min-width: $break-lg) {
+          .about-text-padding {
+            padding-top: 60px;
+          }
+          .text-content {
+            padding-top: 100px;
+            width: 500px;
+          }
+        }
+        @media all and (max-width: $break-sm) {
+          .about-text-padding {
+            padding-top: 20px;
+          }
+          .text-content {
+            justify-content: center;
+            width: 300px;
+          }
+        }
+      }
+      .right-side {
+        @media all and (max-width: $break-sm) {
+          img {
+            width: 400px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// processs
+.general-info {
+  padding: 50px 50px;
+  min-width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+
+  .general-content {
+    max-width: 1140px;
+    @media all and (max-width: $break-sm) {
+      max-width: 300px;
+    }
+    @media all and (min-width: $break-sm) {
+      max-width: 690px;
+    }
+    @media all and (min-width: $break-lg) {
+      max-width: 1140px;
+    }
+  }
+  .buttons-docs {
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  a {
+    color: #5457ed;
+
+    &:hover {
+      cursor: pointer;
+      color: #4548b5;
+    }
+  }
+  .process-images {
+    @media all and (max-width: $break-sm) {
+      img {
+        width: 400px;
+        margin-left: -50px;
+      }
+    }
+  }
+}
+
+.product-design {
+  padding: 100px 0px;
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+    .wrapper {
+      display: flex;
+      width: 1140px;
+      @media all and (max-width: $break-min) {
+        max-width: 300px;
+      }
+      @media all and (max-width: $break-sm) {
+        max-width: 690px;
+      }
+      @media all and (min-width: $break-lg) {
+        max-width: 1140px;
+      }
+      justify-content: center;
+      .left-side {
+        @media all and (min-width: $break-lg) {
+          .image {
+            padding-top: 50px;
+            margin-left: -55px;
+          }
+          .text-content {
+            padding-top: 70px;
+            width: 400px;
+            .text-desc {
+              padding-top: 20px;
+            }
+          }
+        }
+        @media all and (max-width: $break-sm) {
+          .text-content {
+            padding: 20px;
+          }
+          .overview-image {
+            padding-top: 50px;
+          }
+        }
+      }
+      .right-side {
+        @media all and (min-width: $break-lg) {
+          .text-content {
+            padding-top: 50px;
+            width: 400px;
+          }
+          .overview-image {
+            padding-top: 110px;
+          }
+        }
+
+        @media all and (max-width: $break-sm) {
+          .text-content {
+            padding: 20px;
+          }
+          .overview-image {
+            padding-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fullimage {
+  .fi-padding {
+    padding: 100px 0px;
+  }
+  .fi-last-padding {
+    padding-top: 100px;
+  }
+}
