@@ -16,7 +16,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
 //#region Page section style -------------------------------
 .page-head {
   .header-content-container {
-    height: 450px;
+    background: #ffffff;
     position: relative;
     .content {
       height: 60px;
@@ -26,10 +26,10 @@ $background-primary: rgba(84, 89, 237, 0.95);
         display: flex;
         justify-content: space-between;
         width: 1140px;
-        @media all and (max-width: $break-min) {
+        @media all and (min-width: $break-min) {
           max-width: 300px;
         }
-        @media all and (max-width: $break-sm) {
+        @media all and (min-width: $break-sm) {
           max-width: 690px;
         }
         @media all and (min-width: $break-lg) {
@@ -39,6 +39,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
           display: flex;
           justify-content: space-between;
           padding: 10px;
+
           float: left;
         }
         .navbar-right-web {
@@ -72,35 +73,53 @@ $background-primary: rgba(84, 89, 237, 0.95);
         }
       }
     }
-    .main-content {
-      display: flex;
-      justify-content: center;
+  }
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    @media all and (min-width: $break-lg) {
       padding-top: 100px;
+    }
 
-      .wrapper {
-        display: flex;
-        width: 1140px;
-        @media all and (max-width: $break-min) {
-          max-width: 300px;
-        }
-        @media all and (max-width: $break-sm) {
-          max-width: 690px;
-        }
-        @media all and (min-width: $break-lg) {
-          max-width: 1140px;
-        }
-        justify-content: center;
-        .left-side {
-          .text-content {
-            padding-top: 50px;
+    @media all and (max-width: $break-md) {
+      background-color: #c6e5ff;
+    }
+    background: #ffffff;
+
+    .wrapper {
+      display: flex;
+      width: 1140px;
+      @media all and (min-width: $break-min) {
+        max-width: 300px;
+      }
+      @media all and (min-width: $break-sm) {
+        max-width: 690px;
+      }
+      @media all and (min-width: $break-lg) {
+        max-width: 1140px;
+      }
+      .mb-view-image {
+        padding: 100px 20px;
+      }
+      .left-side {
+        .text-content {
+          @media all and (min-width: $break-lg) {
+            width: 450px;
+            padding: 20px;
           }
+          padding-top: 50px;
         }
-        .right-side {
-          .text-content {
-            width: 500px;
-            @media all and (max-width: $break-sm) {
-              width: auto;
-            }
+      }
+      .right-side {
+        .text-content {
+          width: 500px;
+          @media all and (min-width: $break-lg) {
+            padding-left: 50px;
+          }
+
+          @media all and (max-width: $break-sm) {
+            width: auto;
           }
         }
       }
@@ -109,8 +128,13 @@ $background-primary: rgba(84, 89, 237, 0.95);
 }
 
 .product-image {
-  background-color: #c6e5ff;
-  padding: 100px 0px;
+  @media all and (min-width: $break-md) {
+    background-color: #c6e5ff;
+  }
+  @media all and (min-width: $break-lg) {
+    padding: 100px 0px;
+  }
+
   .main-content {
     display: flex;
     justify-content: center;
@@ -119,6 +143,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
     .wrapper {
       display: flex;
       width: 1140px;
+      justify-content: center;
       @media all and (max-width: $break-min) {
         max-width: 300px;
       }
@@ -128,7 +153,13 @@ $background-primary: rgba(84, 89, 237, 0.95);
       @media all and (min-width: $break-lg) {
         max-width: 1140px;
       }
-      justify-content: center;
+      .text-content {
+        @media all and (max-width: $break-md) {
+          background: #ffffff;
+          width: auto;
+          padding: 25px;
+        }
+      }
     }
   }
 }
@@ -157,29 +188,40 @@ $background-primary: rgba(84, 89, 237, 0.95);
       justify-content: center;
       .left-side {
         @media all and (min-width: $break-lg) {
-          .about-text-padding {
-            padding-top: 60px;
-          }
           .text-content {
             padding-top: 100px;
             width: 500px;
+            .about-text-padding {
+              padding-top: 60px;
+            }
           }
         }
-        @media all and (max-width: $break-sm) {
-          .about-text-padding {
-            padding-top: 20px;
+        @media all and (max-width: $break-lg) {
+          .text-content {
+            width: 690px;
+            padding: 10px;
+            .about-text-padding {
+              padding-top: 60px;
+            }
           }
+        }
+
+        @media all and (max-width: $break-sm) {
           .text-content {
             justify-content: center;
             width: 300px;
+            .about-text-padding {
+              padding-top: 20px;
+            }
           }
         }
       }
       .right-side {
-        @media all and (max-width: $break-sm) {
-          img {
-            width: 300px;
-            padding-top: 20px;
+        img {
+          display: inline-block;
+          text-align: center;
+          @media all and (max-width: $break-md) {
+            padding: 10px;
           }
         }
       }
@@ -305,8 +347,14 @@ $background-primary: rgba(84, 89, 237, 0.95);
 .fullimage {
   .fi-padding {
     padding: 100px 0px;
+    @media all and (max-width: $break-md) {
+      padding: 20px 0px;
+    }
   }
   .fi-last-padding {
     padding-top: 100px;
+    @media all and (max-width: $break-md) {
+      padding-top: 20px;
+    }
   }
 }
