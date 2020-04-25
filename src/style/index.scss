@@ -20,7 +20,6 @@ $background-primary: rgba(84, 89, 237, 0.95);
     @media all and (min-width: $break-lg) {
       background: linear-gradient(to left, #ffe7c5 50%, #ffffff 50%);
     }
-    position: relative;
     .content {
       height: 60px;
       display: flex;
@@ -29,8 +28,11 @@ $background-primary: rgba(84, 89, 237, 0.95);
         display: flex;
         justify-content: space-between;
         width: 1140px;
-        @media all and (min-width: $break-min) {
+        @media all and (max-width: $break-small) {
           max-width: 300px;
+        }
+        @media all and (min-width: $break-small) {
+          max-width: 500px;
         }
         @media all and (min-width: $break-sm) {
           max-width: 690px;
@@ -50,6 +52,11 @@ $background-primary: rgba(84, 89, 237, 0.95);
           display: none;
           @media all and (min-width: $break-md) {
             display: flex;
+          }
+          .navbar-text {
+            font-family: "Ubuntu Regular";
+            padding: 10px;
+            font-size: 16px;
           }
 
           .navbar-nav {
@@ -80,10 +87,12 @@ $background-primary: rgba(84, 89, 237, 0.95);
   .main-content {
     @media all and (min-width: $break-lg) {
       background: linear-gradient(to left, #ffe7c5 50%, #ffffff 50%);
+      padding: 100px 0px;
     }
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    position: relative;
     @media all and (min-width: $break-lg) {
       padding-top: 100px;
     }
@@ -152,6 +161,8 @@ $background-primary: rgba(84, 89, 237, 0.95);
   position: relative;
   @media all and (min-width: $break-lg) {
     background: linear-gradient(to left, #c6e5ff 50%, #ffffff 50%);
+
+    padding: 100px 0px;
   }
   .main-content {
     display: flex;

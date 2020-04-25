@@ -104,7 +104,7 @@ const baseConfig = env => {
       ...cleanPlugin,
       new CopyPlugin([
         {
-          from: "public"
+          from: "dist"
         }
       ]),
       new HtmlWebPackPlugin({

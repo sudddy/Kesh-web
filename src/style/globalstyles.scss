@@ -6,22 +6,10 @@
   font-family: "Ubuntu Medium";
   src: url("../fonts/Ubuntu-M.ttf") format("truetype");
 }
-@font-face {
-  font-family: "Roboto Italic";
-  src: url("../fonts/Roboto-Italic.ttf") format("truetype");
-}
+
 @font-face {
   font-family: "Ubuntu Light";
   src: url("../fonts/Ubuntu-Light.ttf") format("truetype");
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 $break-min: 300px;
@@ -177,7 +165,7 @@ h1 {
   &.title {
     font-family: "Ubuntu Medium";
     font-size: 38px;
-    line-height: 32px;
+    line-height: 48px;
     margin: 0 auto;
 
     // @media all and (min-width: $break-small) {
@@ -198,11 +186,20 @@ h2 {
     margin: 0 auto;
 
     @media all and (min-width: $break-sm) {
-      font-size: 34px;
+      font-size: 32px;
     }
 
     @media all and (max-width: $break-sm) {
       font-size: 21px;
+    }
+  }
+  &.title-light {
+    font-family: "Ubuntu Light";
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 auto;
+    @media all and (max-width: $break-sm) {
+      font-size: 16px;
     }
   }
 }
@@ -359,4 +356,48 @@ p {
 
 .grey {
   color: rgba(15, 16, 19, 0.7);
+}
+
+//animations
+.reveal-block.left.aos-animate::before,
+.reveal-block.right.aos-animate::before {
+  transform: scaleX(1);
+}
+
+.reveal-block.right::before {
+  transform: scaleX(0);
+  transform-origin: 0% 100%;
+}
+
+[data-aos="reveal-right"] {
+  transition-property: transform;
+  transition-delay: 0.5s;
+}
+
+[data-aos="reveal-right"] {
+  transform: scaleX(1);
+  &.aos-animate {
+    transform: scaleX(0);
+    transform-origin: 100% 0%;
+  }
+}
+
+.reveal-block {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 101%;
+  background: white;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
 }

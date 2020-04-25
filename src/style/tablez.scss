@@ -16,7 +16,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
 //#region Page section style -------------------------------
 .page-head {
   .header-content-container {
-    height: 450px;
+    background: #ffffff;
     position: relative;
     .content {
       height: 60px;
@@ -26,10 +26,13 @@ $background-primary: rgba(84, 89, 237, 0.95);
         display: flex;
         justify-content: space-between;
         width: 1140px;
-        @media all and (max-width: $break-min) {
+        @media all and (max-width: $break-small) {
           max-width: 300px;
         }
-        @media all and (max-width: $break-sm) {
+        @media all and (min-width: $break-small) {
+          max-width: 500px;
+        }
+        @media all and (min-width: $break-sm) {
           max-width: 690px;
         }
         @media all and (min-width: $break-lg) {
@@ -39,6 +42,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
           display: flex;
           justify-content: space-between;
           padding: 10px;
+
           float: left;
         }
         .navbar-right-web {
@@ -47,7 +51,11 @@ $background-primary: rgba(84, 89, 237, 0.95);
           @media all and (min-width: $break-md) {
             display: flex;
           }
-
+          .navbar-text {
+            font-family: "Ubuntu Regular";
+            padding: 10px;
+            font-size: 16px;
+          }
           .navbar-nav {
             height: 100%;
             margin-right: 150px;
@@ -62,7 +70,6 @@ $background-primary: rgba(84, 89, 237, 0.95);
           .navbar-nav > li > a {
             &:hover {
               background-color: inherit;
-              color: #fff;
               opacity: 0.5;
             }
             &:focus {
@@ -72,32 +79,53 @@ $background-primary: rgba(84, 89, 237, 0.95);
         }
       }
     }
-    .main-content {
-      display: flex;
-      justify-content: center;
+  }
+  .main-content {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0px;
+    @media all and (min-width: $break-lg) {
       padding-top: 100px;
+    }
 
-      .wrapper {
-        display: flex;
-        width: 1140px;
-        @media all and (max-width: $break-min) {
-          max-width: 300px;
-        }
-        @media all and (max-width: $break-sm) {
-          max-width: 690px;
-        }
-        @media all and (min-width: $break-lg) {
-          max-width: 1140px;
-        }
-        justify-content: center;
-        .left-side {
-          .text-content {
-            padding-top: 50px;
+    @media all and (max-width: $break-md) {
+      background-color: #fff7ec;
+    }
+    background: #ffffff;
+
+    .wrapper {
+      display: flex;
+      width: 1140px;
+      @media all and (min-width: $break-min) {
+        max-width: 300px;
+      }
+      @media all and (min-width: $break-sm) {
+        max-width: 690px;
+      }
+      @media all and (min-width: $break-lg) {
+        max-width: 1140px;
+      }
+      .mb-view-image {
+        padding: 100px 20px;
+      }
+      .left-side {
+        .text-content {
+          @media all and (min-width: $break-lg) {
+            width: 450px;
+            padding: 20px;
           }
+          padding-top: 50px;
         }
-        .right-side {
-          .text-content {
-            width: 500px;
+      }
+      .right-side {
+        .text-content {
+          width: 500px;
+          @media all and (min-width: $break-lg) {
+            padding-left: 50px;
+          }
+
+          @media all and (max-width: $break-sm) {
+            width: auto;
           }
         }
       }
@@ -106,8 +134,13 @@ $background-primary: rgba(84, 89, 237, 0.95);
 }
 
 .product-image {
-  background-color: #ffe7c5;
-  padding: 100px 0px;
+  @media all and (min-width: $break-md) {
+    background-color: #ffe7c5;
+  }
+  @media all and (min-width: $break-lg) {
+    padding: 100px 0px;
+  }
+
   .main-content {
     display: flex;
     justify-content: center;
@@ -116,6 +149,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
     .wrapper {
       display: flex;
       width: 1140px;
+      justify-content: center;
       @media all and (max-width: $break-min) {
         max-width: 300px;
       }
@@ -125,14 +159,22 @@ $background-primary: rgba(84, 89, 237, 0.95);
       @media all and (min-width: $break-lg) {
         max-width: 1140px;
       }
-      justify-content: center;
+      .text-content {
+        @media all and (max-width: $break-md) {
+          background: #ffffff;
+          width: auto;
+          padding: 25px;
+        }
+      }
     }
   }
 }
 
 .challenge {
   background-color: #fff7ec;
-  padding: 100px 0px;
+  padding: 50px 0px;
+  position: relative;
+  overflow: hidden;
   .main-content {
     display: flex;
     justify-content: center;
@@ -143,11 +185,15 @@ $background-primary: rgba(84, 89, 237, 0.95);
       width: 1140px;
       justify-content: center;
       .left-side {
+        @media all and (min-width: $break-lg) {
+          padding-top: 100px;
+        }
         .about-text-padding {
-          padding-top: 60px;
+          padding-top: 100px;
         }
         .text-content {
           width: 500px;
+
           @media all and (max-width: $break-sm) {
             width: 300px;
             padding: 30px;
@@ -155,6 +201,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
         }
       }
       .right-side {
+        border: 1px solid red;
         img {
           @media all and(max-width: $break-sm) {
             width: 300px;
@@ -216,7 +263,6 @@ $background-primary: rgba(84, 89, 237, 0.95);
     padding-top: 100px;
 
     .wrapper {
-      border: 2px solid red;
       display: flex;
       width: 1140px;
       justify-content: center;
