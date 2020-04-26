@@ -175,7 +175,7 @@ $break-sm: 768px;
 }
 
 .challenge {
-  overflow: hidden;
+  // overflow: hidden;
   background-color: #eff7fe;
   padding: 100px 0px;
   .main-content {
@@ -296,7 +296,7 @@ $break-sm: 768px;
     }
 
     .wrapper {
-      display: flex;
+      // border: 3px solid red;
       width: 1140px;
       @media all and (max-width: $break-min) {
         max-width: 300px;
@@ -307,11 +307,11 @@ $break-sm: 768px;
       @media all and (min-width: $break-lg) {
         max-width: 1140px;
       }
-      justify-content: center;
+
       .left-side {
+        // border: 3px solid orange;
+        display: inline-block;
         @media all and (min-width: $break-lg) {
-          height: 450px;
-          overflow: scroll;
           .image {
             padding-top: 50px;
             margin-left: -55px;
@@ -333,10 +333,20 @@ $break-sm: 768px;
           }
         }
       }
-      .right-side {
+      #fixedDiv {
         @media all and (min-width: $break-lg) {
-          overflow-y: scroll;
-          height: 450px;
+          position: fixed;
+          margin-top: 30px;
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+      .right-side {
+        // border: 3px solid green;
+        position: sticky;
+        top: 0;
+        @media all and (min-width: $break-lg) {
+          position: relative;
           .text-content {
             padding-top: 50px;
             width: 400px;
