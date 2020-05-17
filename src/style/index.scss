@@ -48,6 +48,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
           float: left;
         }
         .navbar-right-web {
+          // border: 1px solid green;
           height: 100%;
           display: none;
           @media all and (min-width: $break-md) {
@@ -61,7 +62,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
 
           .navbar-nav {
             height: 100%;
-            margin-right: 150px;
+            margin-right: 100px;
           }
           .navbar-nav > li {
             padding-top: 3px;
@@ -94,7 +95,8 @@ $background-primary: rgba(84, 89, 237, 0.95);
     padding-top: 20px;
     position: relative;
     @media all and (min-width: $break-lg) {
-      padding-top: 100px;
+      padding-top: 150px;
+      padding-bottom: 150px;
     }
 
     .wrapper {
@@ -111,28 +113,6 @@ $background-primary: rgba(84, 89, 237, 0.95);
             padding: 15px;
           }
         }
-        @media all and (min-width: $break-lg) {
-          .line {
-            position: absolute;
-            top: 130px;
-            left: -30px;
-            width: 5px;
-            height: 40px;
-            width: 5px;
-            height: 40px;
-            background-image: linear-gradient(to top, #cc8d30, #f4ba48);
-          }
-          .line-small {
-            position: absolute;
-            top: 100px;
-            left: -30px;
-            width: 5px;
-            height: 24px;
-            opacity: 0.2;
-            background-image: linear-gradient(to top, #cc8d30, #f4ba48);
-          }
-        }
-
         .text-content {
           @media all and (max-width: $break-lg) {
             padding: 50px;
@@ -181,27 +161,6 @@ $background-primary: rgba(84, 89, 237, 0.95);
             display: flex;
             justify-content: center;
             padding: 15px;
-          }
-        }
-        @media all and (min-width: $break-lg) {
-          .line {
-            position: absolute;
-            top: 130px;
-            left: -30px;
-            width: 5px;
-            height: 40px;
-            width: 5px;
-            height: 40px;
-            background-image: linear-gradient(to top, #1393ff, #1b5cbc);
-          }
-          .line-small {
-            position: absolute;
-            top: 100px;
-            left: -30px;
-            width: 5px;
-            height: 24px;
-            opacity: 0.2;
-            background-image: linear-gradient(to top, #1393ff, #1b5cbc);
           }
         }
 
@@ -267,6 +226,7 @@ $background-primary: rgba(84, 89, 237, 0.95);
       }
       .right-side {
         .about-img-padding {
+          padding-top: 50px;
           @media all and (max-width: $break-small) {
             width: 300px;
             display: inline-block;

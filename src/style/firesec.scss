@@ -282,12 +282,16 @@ $break-sm: 768px;
 }
 
 .product-design {
-  padding: 100px 0px;
+  padding: 5px 0px;
+  @media all and (min-width: $break-large) {
+    padding: 100px 0px;
+  }
 
   .main-content {
+    position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 5px;
 
     @media all and (max-width: $break-sm) {
       .prod-title {
@@ -311,6 +315,7 @@ $break-sm: 768px;
       .left-side {
         // border: 3px solid orange;
         display: inline-block;
+        position: relative;
         @media all and (min-width: $break-lg) {
           .image {
             padding-top: 50px;
@@ -372,12 +377,14 @@ $break-sm: 768px;
 .fullimage {
   .fi-padding {
     padding: 100px 0px;
+    width: 100%;
     @media all and (max-width: $break-md) {
       padding: 20px 0px;
     }
   }
   .fi-last-padding {
     padding-top: 100px;
+    width: 100%;
     @media all and (max-width: $break-md) {
       padding-top: 20px;
     }

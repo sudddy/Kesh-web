@@ -68,6 +68,9 @@ body {
     color: white;
     border-color: white;
   }
+  &.header-button {
+    border: none;
+  }
   &.transparent-button {
     color: white;
     border-color: white;
@@ -85,13 +88,15 @@ body {
     color: #cc8d30;
     border-color: #cc8d30;
     a {
-      color: white;
+      color: #cc8d30;
       text-decoration: none;
     }
     &:hover {
       background-color: #cc8d30;
       border-color: #cc8d30;
-      color: #fff;
+      a {
+        color: #fff;
+      }
     }
   }
   &.mixed-button {
@@ -111,12 +116,14 @@ body {
     color: #1393ff;
     border-color: #1393ff;
     a {
-      color: white;
       text-decoration: none;
     }
     &:hover {
       background-color: #1393ff;
       color: #fff;
+      a {
+        color: #fff;
+      }
     }
   }
 }
@@ -182,11 +189,11 @@ h2 {
   &.title {
     font-family: "Ubuntu Medium";
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 48px;
     margin: 0 auto;
 
     @media all and (min-width: $break-sm) {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     @media all and (max-width: $break-sm) {
@@ -312,20 +319,28 @@ p {
     padding: 100px;
     color: white;
     .heading {
-      padding-left: 150px;
-      @media all and (max-width: $break-sm) {
-        padding-left: 60px;
+      font-size: 24px;
+      padding-left: 20px;
+      @media all and (min-width: $break-lg) {
+        font-size: 48px;
+        padding-left: 25px;
       }
     }
     .f-second-heading {
-      padding-top: 5px;
-      padding-left: 120px;
-      @media all and (max-width: $break-sm) {
-        padding-left: 45px;
+      font-size: 24px;
+      @media all and (min-width: $break-lg) {
+        font-size: 48px;
       }
+      padding-top: 5px;
     }
     .email {
       padding-top: 60px;
+      font-size: 18px;
+      @media all and (min-width: $break-lg) {
+        font-size: 32px;
+      }
+      display: flex;
+      justify-content: center;
       text-decoration: underline;
       a {
         color: white;

@@ -1,4 +1,12 @@
+$(document).ready(function() {
+  fixedDiv();
+});
+
 $(document).scroll(function() {
+  fixedDiv();
+});
+
+function fixedDiv() {
   var windowHeight = $(window).height();
 
   var link = $("#fourthContainer");
@@ -35,27 +43,4 @@ $(document).scroll(function() {
     console.log("crossed the boder");
     $(".compliance").removeAttr("id");
   }
-  //   if (fixedDivOffset < bottom + 30) {
-  //     $self.css("margin-top", $("#fourthContainer").offset().top);
-  //   } else {
-  //     $self.css("margin-top", "30px");
-  //   }
-
-  //   if (fixedDivOffset > link + 30) {
-  //     $self.css("margin-top", fixedDivOffset + bottom);
-  //   } else {
-  //     $self.css("margin-top", "30px");
-  //   }
-
-  //   var objectTop = $("#fixedDiv").position().top;
-  //   var objectHeight = $("#fixedDiv").outerHeight();
-  //   var windowScrollTop = $(window).scrollTop();
-  //   var windowHeight = $(window).height();
-
-  //   if (windowScrollTop > objectTop) $("#fixedDiv").css("top", objectTop);
-  //   else if (windowScrollTop + windowHeight < objectTop + objectHeight)
-  //     $("#fixedDiv").css("top", windowScrollTop + windowHeight - objectHeight);
-  console.log("");
-  console.log("");
-  console.log("");
-});
+}
