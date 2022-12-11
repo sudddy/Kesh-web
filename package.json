@@ -29,7 +29,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "1.19.1",
     "sass-loader": "^7.3.1",
-    "simple-autoreload-server": "0.2.7",
+    "simple-autoreload-server": "0.2.15",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.41.5",
